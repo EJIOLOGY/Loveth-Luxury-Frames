@@ -15,10 +15,10 @@ Full-stack SAAS platform for premium luxury frames.
 
 ### Client
 cd client
-pnpm install
-pnpm dev
+npm install
+npm dev
 
 ### Server
 cd server
-pnpm install
-pnpm dev
+npm install
+npm dev
