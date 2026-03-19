@@ -1,0 +1,50 @@
+### Get Health Status
+GET http://localhost:5000/
+
+### Create User
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+  "name": "Nma",
+  "email": "gbuzuechidinma@gmail.com",
+  "password": "146822"
+}
+
+###
+
+### Get All Users
+GET http://localhost:5000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWIxYWQ4NWZhNDNkYWEwMTM3ZjI5OGEiLCJpYXQiOjE3NzM0MjUwMjEsImV4cCI6MTc3MzUxMTQyMX0.9VFlha-R_WJuFEDwzimsO4PYZ72GOYULNZ6KAtXqE4E
+
+###
+
+### Get User By ID
+GET http://localhost:5000/api/users/69b1ad85fa43daa0137f298a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OWIxYWQ4NWZhNDNkYWEwMTM3ZjI5OGEiLCJpYXQiOjE3NzM0MjUwMjEsImV4cCI6MTc3MzUxMTQyMX0.9VFlha-R_WJuFEDwzimsO4PYZ72GOYULNZ6KAtXqE4E
+###
+
+### Register
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "Dad",
+  "email": "gbuzueSunday@gmail.com",
+  "password": "146822"
+}
+
+### Login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "gbuzueejiketh@gmail.com",
+  "password": "246822"
+  
+}
+
+### User
+
+GET  http://localhost:5000/api/auth/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YjFhZDg1ZmE0M2RhYTAxMzdmMjk4YSIsImlhdCI6MTc3MzQyNjU5OSwiZXhwIjoxNzczNTEyOTk5fQ.xn-qYoiUaLtd5zgf4EIc9ouEVO26PGl024BdkXYNJF8
