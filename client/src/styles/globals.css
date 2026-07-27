@@ -1,0 +1,182 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-display: var(--font-playfair), serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 0.9rem;
+  --radius-xl: 1.2rem;
+}
+
+:root {
+  --llf-green: oklch(43% 0.14 154);
+  --llf-green-dark: oklch(34% 0.11 154);
+  --luxury-gold: oklch(73% 0.14 82);
+  --warm-ivory: oklch(98% 0.01 95);
+  --rich-black: oklch(17% 0.01 95);
+
+  --background: var(--warm-ivory);
+  --foreground: var(--rich-black);
+  --primary: var(--llf-green);
+  --primary-foreground: white;
+  --secondary: oklch(96% 0.01 95);
+  --secondary-foreground: var(--rich-black);
+  --accent: var(--luxury-gold);
+  --accent-foreground: var(--rich-black);
+  --muted: oklch(95% 0.01 95);
+  --muted-foreground: oklch(55% 0.01 95);
+  --card: white;
+  --card-foreground: var(--rich-black);
+  --popover: white;
+  --popover-foreground: var(--rich-black);
+  --border: oklch(90% 0.01 95);
+  --input: oklch(92% 0.01 95);
+  --ring: var(--primary);
+
+  --background-gradient:
+    radial-gradient(
+      circle at top left,
+      oklch(73% 0.14 82 / 0.06),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      oklch(43% 0.14 154 / 0.05),
+      transparent 40%
+    ),
+    linear-gradient(180deg, white, var(--warm-ivory));
+
+  /* Brand Gradients */
+  --gradient-primary: linear-gradient(
+    135deg,
+    oklch(36% 0.12 154) 0%,
+    oklch(43% 0.14 154) 40%,
+    oklch(50% 0.15 154) 100%
+  );
+
+  --gradient-primary-hover: linear-gradient(
+    135deg,
+    oklch(33% 0.11 154) 0%,
+    oklch(40% 0.13 154) 45%,
+    oklch(46% 0.14 154) 100%
+  );
+}
+
+.dark {
+  --background: var(--rich-black);
+  --foreground: oklch(98% 0.005 95);
+  --primary: var(--llf-green);
+  --primary-foreground: white;
+  --secondary: oklch(24% 0.01 95);
+  --secondary-foreground: white;
+  --accent: var(--luxury-gold);
+  --accent-foreground: var(--rich-black);
+  --card: oklch(21% 0.01 95);
+  --card-foreground: white;
+  --popover: oklch(21% 0.01 95);
+  --popover-foreground: white;
+  --border: oklch(30% 0.01 95);
+  --input: oklch(26% 0.01 95);
+  --ring: var(--primary);
+
+  --background-gradient:
+    radial-gradient(
+      circle at top right,
+      oklch(43% 0.14 154 / 0.25),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      oklch(32% 0.1 154 / 0.18),
+      transparent 40%
+    ),
+    linear-gradient(
+      145deg,
+      oklch(22% 0.04 154),
+      oklch(18% 0.03 154),
+      var(--rich-black)
+    );
+  --gradient-primary: linear-gradient(
+    135deg,
+    oklch(30% 0.1 154),
+    oklch(38% 0.13 154),
+    oklch(46% 0.15 154)
+  );
+
+  --gradient-primary-hover: linear-gradient(
+    135deg,
+    oklch(27% 0.09 154),
+    oklch(35% 0.12 154),
+    oklch(43% 0.14 154)
+  );
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    @apply font-sans;
+  }
+  body {
+    @apply font-sans text-foreground;
+    background: var(--background-gradient);
+    background-attachment: fixed;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings:
+      "kern" 1,
+      "liga" 1,
+      "tnum" 1;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+    font-optical-sizing: auto;
+  }
+}
+
+@layer utilities {
+  .active-nav {
+    border-bottom: 2px solid var(--luxury-gold);
+  }
+  .bg-gradient-primary {
+    background-image: var(--gradient-primary);
+  }
+
+  .bg-gradient-primary-hover {
+    background-image: var(--gradient-primary-hover);
+  }
+}
