@@ -17,6 +17,12 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Loveth Luxury Frames",
   description: "Luxury picture frames for the modern individual",
+  icons: {
+    icon: [
+      { url: "/icon1.svg" },
+      { url: "/apple-touch-icon.svg", type: "image/svg", sizes: "32x32" },
+    ],
+  },
 };
 
 export default function RootLayout({

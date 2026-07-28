@@ -50,7 +50,7 @@ export default function Hero() {
     <section
       aria-label="Featured Loveth Luxury Frames collections"
       aria-roledescription="carousel"
-      className="relative mx-3 my-8 md:mx-5 md:my-5 lg:m-8 isolate min-h-[calc(100svh-20rem)] overflow-hidden md:min-h-screen"
+      className="relative mx-3 my-8 md:mx-5 md:my-5 lg:m-8 isolate min-h-[calc(100svh-15rem)] overflow-hidden md:min-h-screen"
       onBlurCapture={() => setIsPaused(false)}
       onFocusCapture={() => setIsPaused(true)}
       onMouseEnter={() => setIsPaused(true)}

@@ -16,7 +16,13 @@ import { cn } from "@/lib/utils";
 
 function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
-  const isDark = resolvedTheme === "dark";
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDark = mounted ? resolvedTheme === "dark" : false;
 
   return (
     <Button
@@ -32,7 +38,7 @@ function ThemeToggle() {
         aria-hidden="true"
         className={cn(
           "absolute size-4 transition-all duration-200",
-          isDark
+          mounted && isDark
             ? "rotate-90 scale-0 opacity-0"
             : "rotate-0 scale-100 opacity-100",
         )}
@@ -41,7 +47,7 @@ function ThemeToggle() {
         aria-hidden="true"
         className={cn(
           "absolute size-4 transition-all duration-200",
-          isDark
+          mounted && isDark
             ? "rotate-0 scale-100 opacity-100"
             : "-rotate-90 scale-0 opacity-0",
         )}

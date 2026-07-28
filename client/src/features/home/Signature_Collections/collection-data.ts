@@ -31,7 +31,7 @@ export const COLLECTIONS: Collection[] = [
     title: "Graduation Moments",
     description:
       "A milestone earned. Framed with the same care that went into every year that led to it.",
-    image: "/images/collections/graduation.jpg",
+    image: "/images/Slide 1.png",
     href: "/collections/graduation-moments",
     alt: "Graduation photograph framed and displayed in a study",
   },
@@ -40,7 +40,7 @@ export const COLLECTIONS: Collection[] = [
     title: "Executive Spaces",
     description:
       "Boardrooms and corner offices, elevated. Framing that speaks before you do.",
-    image: "/images/collections/executive.jpg",
+    image: "/images/Slide 2.png",
     href: "/collections/executive-spaces",
     alt: "Framed artwork in a modern executive office",
   },
@@ -49,7 +49,7 @@ export const COLLECTIONS: Collection[] = [
     title: "Art & Interiors",
     description:
       "Curated arrangements for walls that deserve more than an afterthought.",
-    image: "/images/collections/art-interiors.jpg",
+    image: "/images/Slide 4.png",
     href: "/collections/art-interiors",
     alt: "Gallery wall arrangement in a luxury interior",
   },
@@ -58,7 +58,7 @@ export const COLLECTIONS: Collection[] = [
     title: "Bespoke Creations",
     description:
       "Commissioned, fitted, certificates and signed—framing built entirely around your vision.",
-    image: "/images/collections/bespoke.jpg",
+    image: "/images/Slide 6.png",
     href: "/collections/bespoke-creations",
     alt: "Custom bespoke frame displayed in a premium home setting",
   },
