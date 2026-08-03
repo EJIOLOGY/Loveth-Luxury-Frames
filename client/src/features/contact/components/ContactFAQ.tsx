@@ -25,11 +25,7 @@ export function ContactFAQ() {
           </h2>
         </div>
 
-        <Accordion
-          type="single"
-          collapsible
-          className="mt-14 border-t border-(--rich-black)/10"
-        >
+        <Accordion className="mt-14 border-t border-(--rich-black)/10">
           {CONTACT_FAQS.map((faq, index) => (
             <AccordionItem key={faq.question} value={`item-${index}`}>
               <AccordionTrigger>{faq.question}</AccordionTrigger>
